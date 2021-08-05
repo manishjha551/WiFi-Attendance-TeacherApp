@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login">
+
+    <TextView
+        android:id="@+id/txt_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_margin="32dp"
+        android:text="Login To Continue"
+        android:textAlignment="center"
+        android:textColor="#2E026A"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/txt_uid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_login"
+        android:inputType="number"
+        android:maxLength="10"
+        android:layout_marginTop="128dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:hint="Enter Teacher ID"
+        android:autofillHints="Enter Teacher ID"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/txt_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_uid"
+        android:inputType="textPassword"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:hint="Enter Password"
+        android:autofillHints="Enter Password"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/txt_pwd"
+        android:layout_marginHorizontal="64dp"
+        android:layout_marginTop="64dp"
+        android:backgroundTint="@color/purple_700"
+        android:text="LOGIN"
+        android:onClick="checkCredentials"
+        tools:ignore="HardcodedText" />
+
+</RelativeLayout>

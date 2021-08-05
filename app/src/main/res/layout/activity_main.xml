@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+<!--    <androidx.appcompat.widget.Toolbar-->
+<!--        android:id="@+id/toolbar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:title="Wi-Fi Attendance"-->
+<!--        app:titleTextColor="@color/white"-->
+<!--        android:background="@color/purple_700"-->
+<!--        android:minHeight="?attr/actionBarSize"-->
+<!--        android:theme="?attr/actionBarTheme" />-->
+
+    <TextView
+        android:id="@+id/txt_display"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:text="Select Lecture from spinner"
+        android:gravity="center"
+        android:layout_marginTop="48dp"
+        android:layout_marginHorizontal="64dp"
+        android:textSize="20sp"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/btn_setSSID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set Default Router"
+        android:textSize="20sp"
+        android:layout_below="@+id/txt_display"
+        android:layout_marginTop="32dp"
+        android:paddingHorizontal="20dp"
+        android:backgroundTint="@color/cardview_dark_background"
+        android:layout_centerHorizontal="true"
+        android:visibility="visible"
+        android:onClick="setDefaultRouter"
+        tools:ignore="HardcodedText" />
+
+    <Spinner
+        android:id = "@+id/spinner"
+        android:layout_width = "match_parent"
+        android:layout_height = "40dp"
+        android:layout_below="@+id/btn_setSSID"
+        android:layout_marginHorizontal="64dp"
+        android:layout_marginTop="64dp"
+        android:gravity="center"
+        android:textSize="24sp"
+        android:background="@drawable/spinner_background"
+        android:popupBackground="@drawable/spinner_background"
+        android:prompt = "@string/app_name"/>
+
+
+    <EditText
+        android:id="@+id/edt_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spinner"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="@android:color/holo_green_light"
+        android:textSize="20sp"
+        android:inputType="number"
+        android:maxLength="4"
+        android:visibility="invisible"/>
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set Code"
+        android:textSize="20sp"
+        android:layout_below="@+id/edt_code"
+        android:layout_marginTop="32dp"
+        android:paddingHorizontal="80dp"
+        android:backgroundTint="@color/cardview_dark_background"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"
+        android:onClick="setCode"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/btn_generatePin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Generate Pin"
+        android:textSize="20sp"
+        android:layout_below="@+id/btn_submit"
+        android:layout_margin="16dp"
+        android:paddingHorizontal="40dp"
+        android:backgroundTint="@color/cardview_dark_background"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"
+        android:onClick="generatePIN"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/btn_logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="LOGOUT"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="32dp"
+        android:textSize="20sp"
+        android:visibility="visible"
+        android:backgroundTint="@color/purple_700"
+        android:onClick="logout"/>
+
+</RelativeLayout>
